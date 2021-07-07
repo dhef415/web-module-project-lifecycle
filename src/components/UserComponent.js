@@ -3,15 +3,12 @@ import React, { Component } from 'react'
 
 class User extends Component {
     state = {
-        user: '',
-        
-        
-        
-        
+        user: '',  
     }
 
     componentDidMount() {
-        axios.get('https://api.github.com/users/dhef415')
+        axios
+        .get('https://api.github.com/users/dhef415')
         .then((res) => {
             console.log(res.data);
             this.setState({user: res.data})
