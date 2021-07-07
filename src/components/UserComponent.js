@@ -19,16 +19,16 @@ class User extends Component {
 
     render() {
         const {user} = this.state;
-        if (!this.state.user) return <p>Loading...</p>
+        if (!this.state.user) return <p style={{color:'white'}}>Loading... 😎Be Patient It Ain't That Serious!😎</p>
         return (
             <div>
-                <h3>{user.name}</h3>
+                <h2 style={{color: 'white', fontFamily:'serif'}}>{user.name}</h2>
                 <img 
                 style={{width: '150px',borderRadius:'50%'}}
                 src={user.avatar_url}
                 alt={user.name} />
-                <h4>Username: {user.login}</h4>
-                <p>Location: {user.location}</p>
+                <h4 style={{color:'white'}}>Username: {user.login}</h4>
+                <h4 style={{color:'white'}}>Location: 🌴{user.location}🌴</h4>
             </div>
         )
     }
